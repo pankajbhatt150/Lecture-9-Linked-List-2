@@ -1,0 +1,18 @@
+Node *swapNodes(Node *head,int i,int j)
+{
+  Node *temp1=head;
+  Node *nodei=head;
+  Node *nodej=head;
+  for(int a=0;a<i;a++)
+  {
+    nodei=nodei->next;
+  }
+  for(int b=0;b<j;b++)
+  {
+    nodej=nodej->next;
+  }
+  int temp=nodei->data;
+  nodei->data=nodej->data;
+  nodej->data=temp;
+  return temp1;
+}
