@@ -1,0 +1,15 @@
+int findNodeRec(Node *head, int n)
+{
+ if(head == NULL){
+        return -1;
+    }
+    if(head -> data == n){
+        return 0;
+    }
+    int count = findNodeRec(head->next,n);
+    if(count == -1){
+        return -1;
+    }
+    // else
+        return count +1;	//Write your code here
+}
